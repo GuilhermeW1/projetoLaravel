@@ -15,21 +15,23 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::namespace('App\Http\Controllers\Site')->group(function(){
-    Route::get('/','HomeController');
+    Route::get('/','HomeController')->name('site.home');
 
-    Route::get('produtos','CategoriaController@index');
+    Route::get('produtos','CategoriaController@index')->name('site.produtos');
 
-    Route::get('produtos/{slug}', 'CategoriaController@show');
+    Route::get('produtos/{slug}', 'CategoriaController@show')->name('site.produtos.category');
 
-    Route::get('blog', 'BlogController');
+    Route::get('blog', 'BlogController')->name('site.blog');
 
-    Route::view('sobre', 'site.about.index');
+    Route::view('sobre', 'site.about.index')->name('site.about');
 
-    Route::get('contato', 'ContatoController@index');
+    Route::get('contato', 'ContatoController@index')->name('site.contact');
 
-    Route::post('contato', 'ContactController@form');
+    Route::post('contato', 'ContactController@form')->name('site.contact.form');
 
 });
+
+
 
 
 
