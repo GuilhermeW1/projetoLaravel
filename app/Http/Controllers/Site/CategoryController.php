@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Site;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CategoriaController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        return view('site.categoria.index');
+        return view('site.category.index');
     }
 
 
@@ -26,7 +26,7 @@ class CategoriaController extends Controller
      */
     public function show($slug)
     {
-        return view('site.categoria.show', ['slug' => $slug]);
+        return view('site.category.show', ['slug' => $slug]);
     }
 
 
