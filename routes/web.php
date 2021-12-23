@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::namespace('App\Http\Controllers\Site')->group(function(){
     Route::get('/','HomeController')->name('site.home');
 
-    Route::get('produtos','CategoriaController@index')->name('site.produtos');
+    Route::get('produtos','CategoryController@index')->name('site.produtos');
 
-    Route::get('produtos/{slug}', 'CategoriaController@show')->name('site.produtos.category');
+    Route::get('produtos/{slug}', 'CategoryController@show')->name('site.produtos.category');
 
     Route::get('blog', 'BlogController')->name('site.blog');
 
