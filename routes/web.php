@@ -25,7 +25,7 @@ Route::namespace('App\Http\Controllers\Site')->group(function(){
 
     Route::view('sobre', 'site.about.index')->name('site.about');
 
-    Route::get('contato', 'ContatoController@index')->name('site.contact');
+    Route::get('contato', 'ContactController@index')->name('site.contact');
 
     Route::post('contato', 'ContactController@form')->name('site.contact.form');
 
