@@ -19,7 +19,7 @@ Route::namespace('App\Http\Controllers\Site')->group(function(){
 
     Route::get('produtos','CategoryController@index')->name('site.produtos');
 
-    Route::get('produtos/{slug}', 'CategoryController@show')->name('site.produtos.category');
+    Route::get('produtos/{category}', 'CategoryController@show')->name('site.produtos.category');
 
     Route::get('blog', 'BlogController')->name('site.blog');
 
